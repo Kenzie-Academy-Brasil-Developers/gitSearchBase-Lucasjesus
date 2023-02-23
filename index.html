@@ -1,22 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- links CSS -->
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/globalStyles.css">
+  <link rel="stylesheet" href="./src/styles/index.css">
 
-    <title>Git Search</title>
-  </head>
-  <body>
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
 
-    <script type="module" src="./src/scripts/index.js"></script>
-  </body>
+<body>
+  <main>
+    <section class="main-Section-Container-Informação">
+      <div class="div-Logo">
+        <h1>
+          Git Search
+        </h1>
+        <p>
+          Encontre e se conecte com profissionais de forma rápida e fácil
+        </p>
+      </div>
+
+    </section>
+
+    <section class="section-Formulario-Pag-Inicial">
+
+      <div class="div-Requerimento">
+
+        <h1>Procurar por um usuário</h1>
+
+        <!-- O event.preventDefault() é usado para evitar 
+          o comportamento padrão de submissão do formulário, e em seguida, a função buscarDados() é chamada -->
+
+        <form onsubmit="event.preventDefault(); buscarDados();">
+          <h4>Usuário github</h4>
+          <input type="text" id="usernameInput" placeholder="Digite um usuário do github aqui...">
+          <div class="section-Button">
+            <button type="submit">Ver perfil do github</button>
+          </div>
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="./src/scripts/index.js"></script>
+</body>
+
 </html>
